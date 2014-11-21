@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+require('shelljs/global');
+require('colors');
+var config = require('../config.js');
+
+checkDependencies(config.SHELL_DEPENDS);
+
+processArgs(process.argv.slice(2));
+
+function processArgs(args) {
+	try {
+		var command = require("../lib/" + args[0]);
+		command(args.slice(1));
+	} catch(e) {
+		err("Not a valid command");
+	}
+}
+
+function checkDependencies(dependencies) {
+	for (var i in dependencies) {
+		var dep = dependencies[i];
+		if (!which(dep)) {
+		  err(dep + ' not found');
+		  err('Please install missing dependency')
+		  exit(1);
+		}
+	}
+}
+
+
+function log(msg) {
+	console.log(msg);
+}
+
+function err(msg) {
+	log(msg.red);
+}
