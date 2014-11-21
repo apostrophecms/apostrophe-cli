@@ -11,5 +11,9 @@
   "dependencies": {
     "colors": "^1.0.3",
     "shelljs": "^0.3.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "apostrophe": "bin/apostrophe"
   }
 }

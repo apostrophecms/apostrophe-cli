@@ -2,18 +2,29 @@
 
 require('shelljs/global');
 require('colors');
-var config = require('../config.js');
+var config = require('../config');
 
 checkDependencies(config.SHELL_DEPENDS);
 
 processArgs(process.argv.slice(2));
 
 function processArgs(args) {
+	var commandInput = args[0];
+
 	try {
-		var command = require("../lib/" + args[0]);
-		command(args.slice(1));
+		var command = require("../lib/commands/" + commandInput);
+		if(command(args.slice(1))) {
+			log(commandInput + " finished successfully");
+		} else {
+			err(commandInput + " failed");
+		}
 	} catch(e) {
-		err("Not a valid command");
+		// Fallback, alias for apostrophe: commands
+		if(require("../lib/commands/apostrophe")(args)) {
+			log("apostrophe:" + commandInput + " finished successfully");
+		} else {
+			err("Not a valid command");
+		}
 	}
 }
 
@@ -27,7 +38,6 @@ function checkDependencies(dependencies) {
 		}
 	}
 }
-
 
 function log(msg) {
 	console.log(msg);
