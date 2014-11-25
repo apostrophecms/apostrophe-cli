@@ -6,5 +6,6 @@ To create a new project with the tool:
 
     apostrophe create <project name>
 
-To run "node app.js apostrophe:<command name>" commands:
+To run "node app.js apostrophe:<command name>":
+
     apostrophe <command name>
