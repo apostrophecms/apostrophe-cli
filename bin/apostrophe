@@ -1,51 +1,19 @@
 #!/usr/bin/env node
 
 require('shelljs/global');
-var config = require('../config');
 require('colors');
-var prefix = ' Apostrophe '.bgWhite.red;
+var program = require('commander');
+var util = require('../lib/util');
 
-checkDependencies(config.SHELL_DEPENDS);
+program.version('0.1.0');
 
-processArgs(process.argv.slice(2));
+util.checkDependencies();
 
-function processArgs(args) {
-	var commandInput = args[0];
-	var styledCommand = ' '.bgRed + commandInput.bgRed.white + ' '.bgRed;
-	try {
-		var command = require("../lib/commands/" + commandInput);
+require('../lib/commands/create')(program);
+var apostropheCommand = require('../lib/apostrophe')(program);
 
-		if(command(args.slice(1))) {
+program.on('--help', function() {
+	apostropheCommand.help();
+});
 
-			log(prefix + styledCommand +  " Finished successfully.".green);
-		} else {
-			err(prefix + styledCommand + " Failed".red);
-		}
-	} catch(e) {
-		// Fallback, alias for apostrophe: commands
-		if(require("../lib/commands/apostrophe")(args)) {
-			log(prefix +  styledCommand + " Finished successfully.".green);
-		} else {
-			err(prefix + " Not a valid command".red);
-		}
-	}
-}
-
-function checkDependencies(dependencies) {
-	for (var i in dependencies) {
-		var dep = dependencies[i];
-		if (!which(dep)) {
-		  err(dep + ' not found');
-		  err('Please install missing dependency')
-		  exit(1);
-		}
-	}
-}
-
-function log(msg) {
-	console.log(msg);
-}
-
-function err(msg) {
-	log(msg.red);
-}
+program.parse(process.argv);
