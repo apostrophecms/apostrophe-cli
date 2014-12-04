@@ -9,11 +9,17 @@ program.version('0.1.0');
 
 util.checkDependencies();
 
+// may want to make this walk the tree for commands
 require('../lib/commands/create')(program);
 var apostropheCommand = require('../lib/apostrophe')(program);
 
 program.on('--help', function() {
-	apostropheCommand.help();
+  apostropheCommand.help();
 });
+
+if (process.argv.length <= 2) {
+  // This means user passed no args, so display help
+  program.help();
+}
 
 program.parse(process.argv);

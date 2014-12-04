@@ -6,6 +6,6 @@ To create a new project with the tool:
 
     apostrophe create <project name>
 
-To run a `node app.js apostrophe:<task name>` task:
+To run a `node app.js apostrophe:<task name>` task (note that this must be run from within an Apostrophe's project root directory):
 
     apostrophe <task name>
