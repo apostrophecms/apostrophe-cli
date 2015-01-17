@@ -9,17 +9,17 @@ program.version('0.1.0');
 
 util.checkDependencies();
 
-// may want to make this walk the tree for commands
-require('../lib/commands/create')(program);
-var apostropheCommand = require('../lib/apostrophe')(program);
+var createCmd = require('../lib/commands/create')(program);
+var aposCmd   = require('../lib/apostrophe')(program);
 
 program.on('--help', function() {
-  apostropheCommand.help();
+  aposCmd.help();
 });
+
+program.parse(process.argv);
 
 if (process.argv.length <= 2) {
   // This means user passed no args, so display help
+  // Needs to come after parse, or command name won't register in help text
   program.help();
 }
-
-program.parse(process.argv);
