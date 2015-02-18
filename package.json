@@ -11,7 +11,8 @@
   "dependencies": {
     "colors": "~1.0.x",
     "commander": "~2.5.x",
-    "shelljs": "~0.3.x"
+    "shelljs": "~0.3.x",
+    "replace": "^0.3.0"
   },
   "preferGlobal": true,
   "bin": {
