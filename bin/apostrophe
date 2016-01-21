@@ -9,8 +9,9 @@ program.version('0.1.4');
 
 util.checkDependencies();
 
-var createCmd = require('../lib/commands/create')(program);
-var aposCmd   = require('../lib/apostrophe')(program);
+var createCmd   = require('../lib/commands/create')(program);
+var create06Cmd = require('../lib/commands/create-0.6')(program);
+var aposCmd     = require('../lib/apostrophe')(program);
 
 program.on('--help', function() {
   aposCmd.help();
