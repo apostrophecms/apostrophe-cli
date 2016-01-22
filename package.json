@@ -17,6 +17,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "apostrophe": "bin/apostrophe"
+    "apostrophe": "bin/apostrophe",
+    "apos": "bin/apostrophe"
   }
 }
