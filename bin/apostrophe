@@ -10,7 +10,7 @@ program.version('0.6.0');
 util.checkDependencies();
 
 var createCmd   = require('../lib/commands/create')(program);
-var create06Cmd = require('../lib/commands/create-0.6')(program);
+var create05Cmd = require('../lib/commands/create-0.5')(program);
 var aposCmd     = require('../lib/apostrophe')(program);
 
 program.on('--help', function() {
