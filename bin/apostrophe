@@ -5,7 +5,7 @@ require('colors');
 var program = require('commander');
 var util = require('../lib/util');
 
-program.version('0.6.0');
+program.version('2.0.0');
 
 util.checkDependencies();
 
