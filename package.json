@@ -8,6 +8,10 @@
   },
   "author": "P'unk Avenue",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punkave/apostrophe-cli.git"
+  },
   "dependencies": {
     "colors": "~1.0.x",
     "commander": "~2.5.x",
