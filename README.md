@@ -1,8 +1,8 @@
 # apostrophe-cli
 
-The apostrophe-cli is a crossplatform starting point for creating and configuring [Apostrophe 2](https://github.com/punkave/apostrophe) projects, providing a simple boilerplate generator and wrapping other useful functions into an easy to use commandline tool.
+The apostrophe-cli is a cross-platform starting point for creating and configuring [Apostrophe 2](https://github.com/punkave/apostrophe) projects, providing a simple boilerplate generator and wrapping other useful functions into an easy to use command line tool.
 
-First, install it as a global module:
+First, install apostrophe-cli as a global NPM module:
 ```bash
 npm install -g apostrophe-cli
 ```
@@ -19,9 +19,35 @@ To create a new project with the tool:
 apostrophe create <project name>
 ```
 
-If you run the `create` command with the `--install` flag, the command will also `npm install` the dependencies of the project and `apostrophe:reset` the database, resulting in a fully bootstrapped project.
+This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/punkave/apostrophe-boilerplate).
 
-#### Run command-line tasks
+If you run the `create` command with the `--install` flag, the command will also `npm install` the dependencies for the project and `apostrophe:reset` the database, resulting in a fully bootstrapped project.
+
+#### Create a widget
+To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
+```bash
+apostrophe createWidget <widgetName>
+```
+
+#### Create a piece
+To bootstrap the necessary files and basic configuration for a new Apostrophe piece type, run the following command from within your Apostrophe project's root directory:
+```bash
+apostrophe createPiece <pieceName>
+```
+
+If you run the `createPiece` command with the `--pages` flag, the command will also set up a corresponding pieces-pages module with your new piece type. Similarly, you can run the `createPiece` command with the `--widgets` flag, which will also set up a corresponding pieces-widgets module along with your new piece type. These flags can be used together or separately.
+
+```bash
+apostrophe createPiece <pieceName> --pages --widgets
+```
+
+#### Create an empty Apostrophe module
+To bootstrap the necessary files and basic configuration for a super basic Apostrophe module, run the following command from within your Apostrophe project's root directory:
+```bash
+apostrophe createModule <moduleName>
+```
+
+#### Run Apostrophe-flavored command-line tasks
 
 To run an Apostrophe command-line task with the apostrophe-cli, which are conventionally run `node app.js <namespace>:<task name>`, execute the following from any location within a project's directory:
 ```bash
@@ -33,8 +59,8 @@ The apostrophe-cli assumes the `apostrophe` namespace when executing tasks. This
 apostrophe <task name>
 ```
 
-For more information on command-line tasks in Apostrophe, visit the [Command line tasks](http://apostrophenow.org/howtos/tasks.html) documentation for Apostrophe.
+For more information on command-line tasks in Apostrophe, visit the [Command line tasks](http://apostrophecms.com/howtos/tasks.html) documentation for Apostrophe.
 
 ---------------
 
-For documentation on Apostrophe, visit the [A2 documentation site](http://apostrophenow.org).
+For more documentation on Apostrophe, visit the [A2 documentation site](http://apostrophecms.com).
