@@ -21,7 +21,7 @@ apostrophe create <project name>
 
 This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/punkave/apostrophe-boilerplate).
 
-If you run the `create` command with the `--install` flag, the command will also `npm install` the dependencies for the project and `apostrophe:reset` the database, resulting in a fully bootstrapped project.
+If you run the `create` command with the `--setup` flag, the command will also `npm install` the dependencies for the project and run `apostrophe-users:add` to create an admin user for the CMS, resulting in a fully bootstrapped project. This command will prompt you for a password for the admin user being created.
 
 #### Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
