@@ -16,37 +16,37 @@ apostrophe
 
 To create a new project with the tool:
 ```bash
-apostrophe create <project name>
+apostrophe create-project <project name>
 ```
 
 This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/punkave/apostrophe-boilerplate).
 
-If you run the `create:project` command with the `--setup` flag, the command will also `npm install` the dependencies for the project and run `apostrophe-users:add` to create an admin user for the CMS, resulting in a fully bootstrapped project. This command will prompt you for a password for the admin user being created.
+If you run the `create-project` command with the `--setup` flag, the command will also `npm install` the dependencies for the project and run `apostrophe-users:add` to create an admin user for the CMS, resulting in a fully bootstrapped project. This command will prompt you for a password for the admin user being created.
 
 #### Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
 ```bash
 # "-widgets" will automatically be appended to the end of your module name
-apostrophe create:widget fancy-button
+apostrophe create-widget fancy-button
 ```
 
 #### Create a piece
 To bootstrap the necessary files and basic configuration for a new Apostrophe piece type, run the following command from within your Apostrophe project's root directory:
 ```bash
 # be sure to use the SINGULAR version of the name of your content type
-apostrophe create:piece vegetable
+apostrophe create-piece vegetable
 ```
 
-If you run the `createPiece` command with the `--pages` flag, the command will also set up a corresponding pieces-pages module with your new piece type. Similarly, you can run the `createPiece` command with the `--widgets` flag, which will also set up a corresponding pieces-widgets module along with your new piece type. These flags can be used together or separately.
+If you run the `create-piece` command with the `--pages` flag, the command will also set up a corresponding pieces-pages module with your new piece type. Similarly, you can run the `create-piece` command with the `--widgets` flag, which will also set up a corresponding pieces-widgets module along with your new piece type. These flags can be used together or separately.
 
 ```bash
-apostrophe create:piece vegetable --pages --widgets
+apostrophe create-piece vegetable --pages --widgets
 ```
 
 #### Create an empty Apostrophe module
 To bootstrap the necessary files and basic configuration for a brand-new Apostrophe module that doesn't extend one of the usual suspects like pieces or widgets:
 ```bash
-apostrophe create:module <module name>
+apostrophe create-module <module name>
 ```
 
 #### Run other Apostrophe-flavored command-line tasks
