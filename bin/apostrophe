@@ -10,7 +10,9 @@ program.version('2.0.0');
 util.checkDependencies();
 
 var createCmd   = require('../lib/commands/create')(program);
-var create05Cmd = require('../lib/commands/create-0.5')(program);
+var createWidgetCmd = require('../lib/commands/create-widget')(program);
+var createPieceCmd = require('../lib/commands/create-piece')(program);
+var createModuleCmd = require('../lib/commands/create-module')(program);
 var aposCmd     = require('../lib/apostrophe')(program);
 
 program.on('--help', function() {
