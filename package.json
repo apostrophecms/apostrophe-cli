@@ -16,7 +16,7 @@
     "colors": "~1.0.x",
     "commander": "~2.5.x",
     "prompt": "^0.2.14",
-    "replace3": "0.6.2",
+    "replace3": "^0.6.2",
     "shelljs": "~0.3.x"
   },
   "preferGlobal": true,
