@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-cli",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Commandline generator and configurator for Apostrophe CMS",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   "dependencies": {
     "colors": "~1.0.x",
     "commander": "~2.5.x",
+    "lodash": "^4.17.4",
     "prompt": "^0.2.14",
-    "replace": "^0.3.0",
     "shelljs": "~0.3.x"
   },
   "preferGlobal": true,
