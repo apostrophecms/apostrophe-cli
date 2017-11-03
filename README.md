@@ -16,7 +16,7 @@ apostrophe
 
 To create a new project with the tool:
 ```bash
-apostrophe create-project <project name>
+apostrophe create-project <shortname-without-spaces>
 ```
 
 This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/punkave/apostrophe-boilerplate).
@@ -51,12 +51,12 @@ apostrophe create-module <module name>
 
 #### Run other Apostrophe-flavored command-line tasks
 
-To run an Apostrophe command-line task with the apostrophe-cli, which are conventionally run `node app.js <namespace>:<task name>`, execute the following from any location within a project's directory:
+To run an Apostrophe command-line task with the apostrophe-cli, which are conventionally run like this: `node app.js <namespace>:<task name>`, you may instead execute the following from any location within a project's directory:
 ```bash
 apostrophe <namespace>:<task name>
 ```
 
-The apostrophe-cli assumes the `apostrophe` namespace when executing tasks. This means that if a task is in the `apostrophe` namespace (such as the `apostrophe:reset` task), simply execute:
+The apostrophe-cli assumes the `apostrophe` namespace when executing tasks. This means that if a task is in the `apostrophe` namespace (such as the `apostrophe:reset` task), you can simply execute:
 ```bash
 apostrophe <task name>
 ```
