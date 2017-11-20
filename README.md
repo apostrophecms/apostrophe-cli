@@ -61,7 +61,7 @@ The apostrophe-cli assumes the `apostrophe` namespace when executing tasks. This
 apostrophe <task name>
 ```
 
-For more information on command-line tasks in Apostrophe, visit the [Command line tasks](http://apostrophecms.com/howtos/tasks.html) documentation for Apostrophe.
+For more information on command-line tasks in Apostrophe, visit the [Command line tasks](http://apostrophecms.org/docs/modules/apostrophe-tasks/index.html) documentation for Apostrophe.
 
 ---------------
 
