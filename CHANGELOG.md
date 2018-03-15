@@ -1,5 +1,9 @@
 # Changelog
 
+** 2.2.0
+
+* Automatically generates session secret, if the boilerplate has a placeholder for it (and apostrophe-boilerplate now does).
+
 ** 2.1.5
 
 * Shortnames are not titles, data/local.js doesn't have an example worth copying in and isn't essential in dev
