@@ -4,8 +4,9 @@ require('shelljs/global');
 require('colors');
 var program = require('commander');
 var util = require('../lib/util');
+var pkginfo = require('pkginfo')(module, 'version');
 
-program.version('2.0.0');
+program.version(module.exports.version);
 
 util.checkDependencies();
 
