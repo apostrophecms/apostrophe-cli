@@ -16,10 +16,16 @@ function getVersion() {
   var output = 'apostrophe-cli: ' + module.exports.version;
   var aposPath = cwd + '/node_modules/apostrophe/';
 
-  // Append version of apostrophe if installed.
+  // Append message for apostrophe.
   if (fs.existsSync(aposPath)) {
     var package = require(aposPath + 'package.json');
-    output += ', apostrophe: ' + package.version;
+
+    output += 'apostrophe v' + package.version + ' is installed in the current directory.';
+  } else {
+    var execSync = require('child_process').execSync;
+    var aposVersion = execSync('npm view apostrophe version').toString();
+
+    output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project.';
   }
 
   return output;
