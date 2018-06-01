@@ -4,9 +4,26 @@ require('shelljs/global');
 require('colors');
 var program = require('commander');
 var util = require('../lib/util');
-var pkginfo = require('pkginfo')(module, 'version');
+var fs = require('fs');
 
-program.version(module.exports.version);
+program.version(getVersion());
+
+// Get version of apostrophe-cli and apostrophe.
+function getVersion() {
+  var pkginfo = require('pkginfo')(module, 'version');
+  var cwd = process.cwd();
+
+  var output = 'apostrophe-cli: ' + module.exports.version;
+  var aposPath = cwd + '/node_modules/apostrophe/';
+
+  // Append version of apostrophe if installed.
+  if (fs.existsSync(aposPath)) {
+    var package = require(aposPath + 'package.json');
+    output += ', apostrophe: ' + package.version;
+  }
+
+  return output;
+}
 
 util.checkDependencies();
 
