@@ -20,7 +20,7 @@ function getVersion() {
   if (fs.existsSync(aposPath)) {
     var package = require(aposPath + 'package.json');
 
-    output += 'apostrophe v' + package.version + ' is installed in the current directory.';
+    output += 'apostrophe v' + package.version + ' is installed in this project.';
   } else {
     var execSync = require('child_process').execSync;
     var aposVersion = execSync('npm view apostrophe version').toString();
