@@ -25,7 +25,7 @@ function getVersion() {
     var execSync = require('child_process').execSync;
     var aposVersion = execSync('npm view apostrophe version').toString();
 
-    output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project.';
+    output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
   }
 
   return output;
