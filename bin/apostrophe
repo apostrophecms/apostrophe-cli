@@ -22,10 +22,20 @@ function getVersion() {
 
     output += 'apostrophe v' + package.version + ' is installed in this project.';
   } else {
-    var execSync = require('child_process').execSync;
-    var aposVersion = execSync('npm view apostrophe version').toString();
+    var request = require('request');
 
-    output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
+    request.get('https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json', function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        var packageJSON = JSON.parse(body);
+
+        output += 'apostrophe v' + packageJSON.version + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
+      } else {
+        var execSync = require('child_process').execSync;
+        var aposVersion = execSync('npm view apostrophe version').toString();
+
+        output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
+      }
+    });
   }
 
   return output;
