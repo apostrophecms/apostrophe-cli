@@ -18,8 +18,8 @@
     "lodash": "^4.17.4",
     "pkginfo": "^0.4.1",
     "prompt": "^0.2.14",
-    "request": "^2.87.0",
-    "shelljs": "~0.3.x"
+    "shelljs": "~0.3.x",
+    "sync-request": "^6.0.0"
   },
   "preferGlobal": true,
   "bin": {
