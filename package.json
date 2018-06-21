@@ -25,5 +25,13 @@
   "bin": {
     "apostrophe": "bin/apostrophe",
     "apos": "bin/apostrophe"
-  }
+  },
+  "keywords": [
+    "apostrophecms",
+    "apostrophe",
+    "apostrophe-cms",
+    "cms",
+    "content-management",
+    "content-management-system",
+  ]
 }
