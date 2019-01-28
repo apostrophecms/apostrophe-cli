@@ -1,5 +1,9 @@
 # Changelog
 
+** 2.3.1
+
+Recognize `apostrophe-open-museum` as a default value for `shortName` so it can be autoreplaced for a new project.
+
 ** 2.3.0
 
 * Automatically configures `disabledFileKey` for projects that have that option in `app.js` (not present in the standard apostrophe-boilerplate but we use it in our own in-house boilerplate). See the `uploadfs` documentation for the benefits.
