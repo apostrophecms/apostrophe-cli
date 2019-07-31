@@ -15,7 +15,7 @@
   "dependencies": {
     "colors": "~1.0.x",
     "commander": "~2.5.x",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.15",
     "pkginfo": "^0.4.1",
     "prompt": "^0.2.14",
     "shelljs": "~0.3.x",
