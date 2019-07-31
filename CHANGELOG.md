@@ -1,5 +1,9 @@
 # Changelog
 
+** 2.3.2
+
+Updates the lodash version to address a reported vulnerability.
+
 ** 2.3.1
 
 Recognize `apostrophe-open-museum` as a default value for `shortName` so it can be autoreplaced for a new project.
