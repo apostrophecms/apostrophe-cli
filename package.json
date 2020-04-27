@@ -1,16 +1,16 @@
 {
   "name": "apostrophe-cli",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Commandline generator and configurator for Apostrophe CMS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx eslint ."
   },
-  "author": "P'unk Avenue",
+  "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/punkave/apostrophe-cli.git"
+    "url": "https://github.com/apostrophecms/apostrophe-cli.git"
   },
   "dependencies": {
     "colors": "~1.0.x",
@@ -20,6 +20,15 @@
     "prompt": "^0.2.14",
     "shelljs": "~0.3.x",
     "sync-request": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-apostrophe": "^3.1.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   },
   "preferGlobal": true,
   "bin": {
