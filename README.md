@@ -12,7 +12,7 @@ To view the available commands in a given context, execute the newly-installed c
 apostrophe
 ```
 
-#### Create a project
+## Create a project
 
 To create a new project with the tool:
 ```bash
@@ -21,16 +21,20 @@ apostrophe create-project <shortname-without-spaces>
 
 This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/apostrophecms/apostrophe-boilerplate).
 
+### options
+
+Run `create-project` with a `--boilerplate` flag to start from a Github repository other than the standard `apostrophe-boilerplate` repo. For example, `apostrophe create-project <shortname-without-spaces> --boilerplate=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
+
 If you run the `create-project` command with the `--setup` flag, the command will also `npm install` the dependencies for the project and run `apostrophe-users:add` to create an admin user for the CMS, resulting in a fully bootstrapped project. This command will prompt you for a password for the admin user being created.
 
-#### Create a widget
+## Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
 ```bash
 # "-widgets" will automatically be appended to the end of your module name
 apostrophe create-widget fancy-button
 ```
 
-#### Create a piece
+## Create a piece
 To bootstrap the necessary files and basic configuration for a new Apostrophe piece type, run the following command from within your Apostrophe project's root directory:
 ```bash
 # be sure to use the SINGULAR version of the name of your content type
@@ -43,13 +47,13 @@ If you run the `create-piece` command with the `--pages` flag, the command will 
 apostrophe create-piece vegetable --pages --widgets
 ```
 
-#### Create an empty Apostrophe module
+## Create an empty Apostrophe module
 To bootstrap the necessary files and basic configuration for a brand-new Apostrophe module that doesn't extend one of the usual suspects like pieces or widgets:
 ```bash
 apostrophe create-module <module name>
 ```
 
-#### Run other Apostrophe-flavored command-line tasks
+## Run other Apostrophe-flavored command-line tasks
 
 To run an Apostrophe command-line task with the apostrophe-cli, which are conventionally run like this: `node app.js <namespace>:<task name>`, you may instead execute the following from any location within a project's directory:
 ```bash
