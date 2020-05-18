@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.4 - May 18, 2020
+
+* Documents and prioritizes the existing `apos` command alias as the CLI command.
+
 ## 2.3.3 - May 6, 2020
 
 * Cleans up CLI output spacing. Also adds ESLint testing and documents the `--boilerplate` option.
