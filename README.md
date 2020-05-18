@@ -1,8 +1,8 @@
-# apostrophe-cli
+# Apostrophe CLI
 
-The apostrophe-cli is a cross-platform starting point for creating and configuring [ApostropheCMS](https://github.com/apostrophecms/apostrophe) projects, providing a simple boilerplate generator and wrapping other useful functions into an easy to use command line tool.
+The Apostrophe CLI is a cross-platform starting point for creating and configuring [ApostropheCMS](https://github.com/apostrophecms/apostrophe) projects, providing a simple boilerplate generator and wrapping other useful functions into an easy to use command line tool.
 
-First, install apostrophe-cli as a global NPM module:
+First, install `apostrophe-cli` as a global NPM module:
 ```bash
 npm install -g apostrophe-cli
 ```
@@ -11,6 +11,8 @@ To view the available commands in a given context, execute the newly-installed c
 ```bash
 apostrophe
 ```
+
+**Note:** All Apostrophe CLI commands can also be run with the abbreviated `apos` command, in addition to `apostrophe`.
 
 ## Create a project
 
@@ -55,18 +57,18 @@ apostrophe create-module <module name>
 
 ## Run other Apostrophe-flavored command-line tasks
 
-To run an Apostrophe command-line task with the apostrophe-cli, which are conventionally run like this: `node app.js <namespace>:<task name>`, you may instead execute the following from any location within a project's directory:
+To run an Apostrophe command-line task with the Apostrophe CLI, which are conventionally run like this: `node app.js <namespace>:<task name>`, you may instead execute the following from any location within a project's directory:
 ```bash
 apostrophe <namespace>:<task name>
 ```
 
-The apostrophe-cli assumes the `apostrophe` namespace when executing tasks. This means that if a task is in the `apostrophe` namespace (such as the `apostrophe:reset` task), you can simply execute:
+The Apostrophe CLI assumes the `apostrophe` namespace when executing tasks. This means that if a task is in the `apostrophe` namespace (such as the `apostrophe:generation` task), you can simply execute:
 ```bash
 apostrophe <task name>
 ```
 
-For more information on command-line tasks in Apostrophe, visit the [Command line tasks](https://docs.apostrophecms.org/apostrophe/reference/modules/apostrophe-tasks) documentation for Apostrophe.
+For more information on command-line tasks in Apostrophe, visit the [Command line tasks](https://docs.apostrophecms.org/reference/modules/apostrophe-tasks.html) documentation for Apostrophe.
 
 ---------------
 
-For more documentation on Apostrophe, visit the [documentation site](https://docs.apostrophecms.org).
+For more documentation for ApostropheCMS, visit the [documentation site](https://docs.apostrophecms.org).
