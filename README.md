@@ -36,12 +36,26 @@ To bootstrap the necessary files and basic configuration for a new Apostrophe wi
 apos create-widget fancy-button
 ```
 
+**Note:** You will then need to register this widget module in `app.js` so it is available in your project code. The same is true for the commands below when you create a piece module or generic module.
+
+```javascript
+// app.js
+module.exports = {
+  // ...
+  'fancy-button-widgets': {},
+  // ...
+}
+```
+
+
 ## Create a piece
 To bootstrap the necessary files and basic configuration for a new Apostrophe piece type, run the following command from within your Apostrophe project's root directory:
 ```bash
 # be sure to use the SINGULAR version of the name of your content type
 apos create-piece vegetable
 ```
+
+Then remember to register `'vegetables': {}` in `apps.js` above.
 
 If you run the `create-piece` command with the `--pages` flag, the command will also set up a corresponding pieces-pages module with your new piece type. Similarly, you can run the `create-piece` command with the `--widgets` flag, which will also set up a corresponding pieces-widgets module along with your new piece type. These flags can be used together or separately.
 
@@ -54,6 +68,8 @@ To bootstrap the necessary files and basic configuration for a brand-new Apostro
 ```bash
 apos create-module <module name>
 ```
+
+Remember to register the module in `apps.js` with the other module types.
 
 ## Run other Apostrophe-flavored command-line tasks
 
