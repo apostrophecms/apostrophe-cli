@@ -10,7 +10,6 @@ program.version(getVersion());
 
 // Get version of apostrophe-cli and apostrophe.
 function getVersion() {
-  var pkginfo = require('pkginfo')(module, 'version');
   var cwd = process.cwd();
 
   var output = 'apostrophe-cli: v' + module.exports.version + '\n';
@@ -18,14 +17,14 @@ function getVersion() {
 
   // Append message for apostrophe.
   if (fs.existsSync(aposPath)) {
-    var package = require(aposPath + 'package.json');
+    var aposPkg = require(aposPath + 'package.json');
 
-    output += 'apostrophe v' + package.version + ' is installed in this project.';
+    output += 'apostrophe v' + aposPkg.version + ' is installed in this project.';
   } else {
     var request = require('sync-request');
     var response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
 
-    if (response.statusCode == 200) {
+    if (response.statusCode === 200) {
       var packageJSON = JSON.parse(response.body);
 
       output += 'apostrophe ' + packageJSON.dependencies.apostrophe + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
@@ -42,11 +41,11 @@ function getVersion() {
 
 util.checkDependencies();
 
-var createCmd   = require('../lib/commands/create')(program);
-var createWidgetCmd = require('../lib/commands/create-widget')(program);
-var createPieceCmd = require('../lib/commands/create-piece')(program);
-var createModuleCmd = require('../lib/commands/create-module')(program);
-var aposCmd     = require('../lib/apostrophe')(program);
+require('../lib/commands/create')(program);
+require('../lib/commands/create-widget')(program);
+require('../lib/commands/create-piece')(program);
+require('../lib/commands/create-module')(program);
+var aposCmd = require('../lib/apostrophe')(program);
 
 program.on('--help', function() {
   aposCmd.help();
