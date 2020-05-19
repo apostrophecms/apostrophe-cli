@@ -6,55 +6,59 @@ var program = require('commander');
 var util = require('../lib/util');
 var fs = require('fs');
 
-program.version(getVersion());
+function execute () {
+  program.version(getVersion());
 
-// Get version of apostrophe-cli and apostrophe.
-function getVersion() {
-  var cwd = process.cwd();
+  // Get version of apostrophe-cli and apostrophe.
+  function getVersion() {
+    var cwd = process.cwd();
 
-  var output = 'apostrophe-cli: v' + module.exports.version + '\n';
-  var aposPath = cwd + '/node_modules/apostrophe/';
+    var output = 'apostrophe-cli: v' + module.exports.version + '\n';
+    var aposPath = cwd + '/node_modules/apostrophe/';
 
-  // Append message for apostrophe.
-  if (fs.existsSync(aposPath)) {
-    var aposPkg = require(aposPath + 'package.json');
+    // Append message for apostrophe.
+    if (fs.existsSync(aposPath)) {
+      var aposPkg = require(aposPath + 'package.json');
 
-    output += 'apostrophe v' + aposPkg.version + ' is installed in this project.';
-  } else {
-    var request = require('sync-request');
-    var response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
-
-    if (response.statusCode === 200) {
-      var packageJSON = JSON.parse(response.body);
-
-      output += 'apostrophe ' + packageJSON.dependencies.apostrophe + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
+      output += 'apostrophe v' + aposPkg.version + ' is installed in this project.';
     } else {
-      var execSync = require('child_process').execSync;
-      var aposVersion = execSync('npm view apostrophe version').toString();
+      var request = require('sync-request');
+      var response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
 
-      output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
+      if (response.statusCode === 200) {
+        var packageJSON = JSON.parse(response.body);
+
+        output += 'apostrophe ' + packageJSON.dependencies.apostrophe + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
+      } else {
+        var execSync = require('child_process').execSync;
+        var aposVersion = execSync('npm view apostrophe version').toString();
+
+        output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
+      }
     }
+
+    return output;
   }
 
-  return output;
+  util.checkDependencies();
+
+  require('../lib/commands/create')(program);
+  require('../lib/commands/create-widget')(program);
+  require('../lib/commands/create-piece')(program);
+  require('../lib/commands/create-module')(program);
+  var aposCmd = require('../lib/apostrophe')(program);
+
+  program.on('--help', function() {
+    aposCmd.help();
+  });
+
+  program.parse(process.argv);
+
+  if (process.argv.length <= 2) {
+    // This means user passed no args, so display help
+    // Needs to come after parse, or command name won't register in help text
+    program.help();
+  }
 }
 
-util.checkDependencies();
-
-require('../lib/commands/create')(program);
-require('../lib/commands/create-widget')(program);
-require('../lib/commands/create-piece')(program);
-require('../lib/commands/create-module')(program);
-var aposCmd = require('../lib/apostrophe')(program);
-
-program.on('--help', function() {
-  aposCmd.help();
-});
-
-program.parse(process.argv);
-
-if (process.argv.length <= 2) {
-  // This means user passed no args, so display help
-  // Needs to come after parse, or command name won't register in help text
-  program.help();
-}
+execute();
