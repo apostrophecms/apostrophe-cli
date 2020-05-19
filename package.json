@@ -15,10 +15,13 @@
   "dependencies": {
     "colors": "~1.0.x",
     "commander": "~2.5.x",
+    "conf": "^6.2.4",
     "lodash": "^4.17.15",
+    "meh-activity-logger": "^2.0.0",
     "prompt": "^0.2.14",
     "shelljs": "~0.3.x",
-    "sync-request": "^6.0.0"
+    "sync-request": "^6.0.0",
+    "universal-analytics": "^0.4.20"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
