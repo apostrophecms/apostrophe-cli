@@ -2,7 +2,7 @@
 
 require('shelljs/global');
 require('colors');
-var program = require('commander');
+var { program } = require('commander');
 var util = require('../lib/util');
 const confUtils = require('../lib/conf-utils');
 var fs = require('fs');
@@ -56,7 +56,7 @@ async function execute () {
 
   await confUtils.checkConf();
 
-  program.parse(process.argv);
+  program.parseAsync(process.argv);
 
   if (process.argv.length <= 2) {
     // This means user passed no args, so display help
