@@ -13,7 +13,7 @@
     "url": "https://github.com/apostrophecms/apostrophe-cli.git"
   },
   "dependencies": {
-    "colors": "~1.0.x",
+    "colors": "^1.4.0",
     "commander": "^5.1.0",
     "conf": "^6.2.4",
     "lodash": "^4.17.15",
