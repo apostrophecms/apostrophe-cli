@@ -17,6 +17,7 @@
     "commander": "~2.5.x",
     "conf": "^6.2.4",
     "lodash": "^4.17.15",
+    "pkginfo": "^0.4.1",
     "prompt": "^0.2.14",
     "prompts": "^2.3.2",
     "shelljs": "~0.3.x",

@@ -12,6 +12,7 @@ async function execute () {
 
   // Get version of apostrophe-cli and apostrophe.
   function getVersion() {
+    require('pkginfo')(module, 'version');
     var cwd = process.cwd();
 
     var output = 'apostrophe-cli: v' + module.exports.version + '\n';
