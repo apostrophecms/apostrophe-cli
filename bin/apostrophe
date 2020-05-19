@@ -4,9 +4,10 @@ require('shelljs/global');
 require('colors');
 var program = require('commander');
 var util = require('../lib/util');
+const confUtils = require('../lib/conf-utils');
 var fs = require('fs');
 
-function execute () {
+async function execute () {
   program.version(getVersion());
 
   // Get version of apostrophe-cli and apostrophe.
@@ -51,6 +52,8 @@ function execute () {
   program.on('--help', function() {
     aposCmd.help();
   });
+
+  await confUtils.checkConf();
 
   program.parse(process.argv);
 

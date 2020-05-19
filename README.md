@@ -73,9 +73,7 @@ Remember to register the module in `apps.js` with the other module types.
 
 ## CLI analytics
 
-To help us better understand how devs are using the CLI, you will have the option to *opt-in* to share basic usage information with the maintainers. This is limited to:
-
-1. The command you have executed
+To help us better understand how devs are using the CLI, you will have the option to *opt-in* to share basic usage information with the maintainers. This is limited to 1) the command you have executed, 2) if that command succeeded, and 3) a random, anonymous user ID.
 
 **If you do not explicitly agree to participate, no infomation will be tracked.** Through the `universal-analytics` package, we use the option to anonymize your IP address, so we know as little as possible about you other than what is listed above. See the `sendAnalyticsEvent` utility method if you're curious how this all works.
 

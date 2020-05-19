@@ -18,9 +18,11 @@
     "conf": "^6.2.4",
     "lodash": "^4.17.15",
     "prompt": "^0.2.14",
+    "prompts": "^2.3.2",
     "shelljs": "~0.3.x",
     "sync-request": "^6.0.0",
-    "universal-analytics": "^0.4.20"
+    "universal-analytics": "^0.4.20",
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
