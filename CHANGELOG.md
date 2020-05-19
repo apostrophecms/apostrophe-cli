@@ -1,10 +1,16 @@
 # Changelog
 
-## 2.3.4 - May 18, 2020
+## 2.4.0 - 2020-06-03
 
-* Documents and prioritizes the existing `apos` command alias as the CLI command.
+* Documents and prioritizes the existing `apos` command alias as the CLI
+command.
+* Adds the opt-in option to send basic, anonymous usage information to the
+maintainers. This involves the CLI creating a configuration file on the user's
+machine to save the user's approval response and a unique ID.
+* More colors! Command logs are no longer all an ❗️alarming❗️ shade red. Red
+now means something.
 
-## 2.3.3 - May 6, 2020
+## 2.3.3 - 2020-05-06
 
 * Cleans up CLI output spacing. Also adds ESLint testing and documents the `--boilerplate` option.
 

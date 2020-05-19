@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-cli",
-  "version": "2.3.4",
+  "version": "2.4.0",
   "description": "Commandline generator and configurator for Apostrophe CMS",
   "main": "index.js",
   "scripts": {
