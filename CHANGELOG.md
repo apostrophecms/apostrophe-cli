@@ -6,7 +6,7 @@
 command.
 * Adds the opt-in option to send basic, anonymous usage information to the
 maintainers. This involves the CLI creating a configuration file on the user's
-machine to save the user's approval response and a unique ID.
+machine to save the user's approval response and a random, unique ID.
 * More colors! Command logs are no longer all an ❗️alarming❗️ shade of red. Red
 now means something.
 
