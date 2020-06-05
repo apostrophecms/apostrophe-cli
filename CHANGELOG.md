@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0-beta - 2020-06-17
+## 2.4.0 - 2020-06-17
 
 * Documents and prioritizes the existing `apos` command alias as the CLI
 command.
