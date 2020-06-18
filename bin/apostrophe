@@ -48,11 +48,6 @@ async function execute () {
   require('../lib/commands/create-widget')(program);
   require('../lib/commands/create-piece')(program);
   require('../lib/commands/create-module')(program);
-  var aposCmd = require('../lib/apostrophe')(program);
-
-  program.on('--help', function() {
-    aposCmd.help();
-  });
 
   await confUtils.checkConf();
 
