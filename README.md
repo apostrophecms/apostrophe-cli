@@ -84,20 +84,6 @@ To help us better understand how devs are using the CLI, you will have the optio
 
 As we work to grow the Apostrophe community, knowing if, and how much, people are finding the CLI useful can tell us about the community's growth. It can also help us know if our work to make the CLI *more* useful for everyone is working!
 
-## Run other Apostrophe-flavored command-line tasks
-
-To run an Apostrophe command-line task with the Apostrophe CLI, which are conventionally run like this: `node app.js <namespace>:<task name>`, you may instead execute the following from any location within a project's directory:
-```bash
-apos <namespace>:<task name>
-```
-
-The Apostrophe CLI assumes the `apostrophe` namespace when executing tasks. This means that if a task is in the `apostrophe` namespace (such as the `apostrophe:generation` task), you can simply execute:
-```bash
-apos <task name>
-```
-
-For more information on command-line tasks in Apostrophe, visit the [Command line tasks](https://docs.apostrophecms.org/reference/modules/apostrophe-tasks.html) documentation for Apostrophe.
-
 ---------------
 
 For more documentation for ApostropheCMS, visit the [documentation site](https://docs.apostrophecms.org).
