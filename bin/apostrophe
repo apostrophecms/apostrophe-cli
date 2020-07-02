@@ -11,7 +11,6 @@ program.version(getVersion());
 function getVersion() {
   require('pkginfo')(module, 'version');
   var cwd = process.cwd();
-  console.dir(module.exports);
 
   var output = 'apostrophe-cli: v' + module.exports.version + '\n';
   var aposPath = cwd + '/node_modules/apostrophe/';
