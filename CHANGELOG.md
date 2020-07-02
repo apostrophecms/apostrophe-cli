@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.5 - 2020-07-15
+
+* Removes an unnecessary API call to Github that causes problems for people behind a firewall.
+* Cleans up eslint errors.
+* Removes `sync-request` as a dependency.
+
 ## 2.3.4 - May 18, 2020
 
 * Documents and prioritizes the existing `apos` command alias as the CLI command.
