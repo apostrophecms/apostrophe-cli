@@ -9,10 +9,10 @@ var fs = require('fs');
 program.version(getVersion());
 // Get version of apostrophe-cli and apostrophe.
 function getVersion() {
-  require('pkginfo')(module, 'version');
   var cwd = process.cwd();
+  var cliVersion = require('../package.json').version;
 
-  var output = 'apostrophe-cli: v' + module.exports.version + '\n';
+  var output = 'apostrophe-cli: v' + cliVersion + '\n';
   var aposPath = cwd + '/node_modules/apostrophe/';
 
   // Append message for apostrophe.
