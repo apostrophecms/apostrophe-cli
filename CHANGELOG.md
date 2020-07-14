@@ -1,14 +1,11 @@
 # Changelog
 
-** 2.3.6
-
-* Adds `--dev` flag to `npm update` when running `create-project` with the `--setup` flag so that devDependencies are installed.
-
 ## 2.3.5 - 2020-07-15
 
 * Removes an unnecessary API call to Github that causes problems for people behind a firewall.
 * Cleans up eslint errors.
 * Removes `sync-request` as a dependency.
+* Adds `--dev` flag to `npm update` when running `create-project` with the `--setup` flag so that devDependencies are installed.
 
 ## 2.3.4 - May 18, 2020
 
