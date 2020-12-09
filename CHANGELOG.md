@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.6 - 2020-12-18
+
+* Replaces `prompt` with `prompts` to fix a Node.js 14 incompatibility.
+* Explicitly notes a Node.js 8+ requirement. ApostropheCMS already requires Node 8+.
+
 ## 2.3.5 - 2020-07-15
 
 * Removes an unnecessary API call to Github that causes problems for people behind a firewall.
