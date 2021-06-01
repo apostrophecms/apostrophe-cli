@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Fixes
+
+- Updates `hosted-git-info` for a vulnerability warning.
+
 ## 2.3.6 - 2020-12-14
 
 * Replaces `prompt` with `prompts` to fix a Node.js 14 incompatibility.
