@@ -2,13 +2,13 @@
 
 ## 3.0.0 - UNRELEASED
 
-* Documents and prioritizes the existing `apos` command alias as the CLI
+- Documents and prioritizes the existing `apos` command alias as the CLI
 command.
-* More colors! Command logs are no longer all an ❗️alarming❗️ shade of red. Red now means errors.
+- More colors! Command logs are no longer all an ❗️alarming❗️ shade of red. Red now means errors.
 
 ### Breaks
 
-* The Apostrophe CLI no longer supports running core and Apostrophe module tasks. The CLI tool was providing an alias for these `apos apostrophe-users:add admin admin`. These can all still be run more directly on the command line with `node app`, e.g., `node app apostrophe-users:add admin admin`.
+- The Apostrophe CLI no longer supports running core and Apostrophe module tasks. The CLI tool was providing an alias for these `apos apostrophe-users:add admin admin`. These can all still be run more directly on the command line with `node app`, e.g., `node app apostrophe-users:add admin admin`.
 
 ## 2.3.7 - 2021-06-02
 
