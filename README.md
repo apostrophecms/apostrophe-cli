@@ -2,6 +2,8 @@
 
 The Apostrophe CLI is a cross-platform starting point for creating and configuring [ApostropheCMS](https://github.com/apostrophecms/apostrophe) projects, providing a simple boilerplate generator and wrapping other useful functions into an easy to use command line tool.
 
+**Requires Node.js 8+**
+
 First, install `apostrophe-cli` as a global NPM module:
 ```bash
 npm install -g apostrophe-cli
