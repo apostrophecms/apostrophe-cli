@@ -4,8 +4,11 @@
 
 * Documents and prioritizes the existing `apos` command alias as the CLI
 command.
-* More colors! Command logs are no longer all an ❗️alarming❗️ shade of red. Red
-now means something (errors).
+* More colors! Command logs are no longer all an ❗️alarming❗️ shade of red. Red now means errors.
+
+### Breaks
+
+* The Apostrophe CLI no longer supports running core and Apostrophe module tasks. The CLI tool was providing an alias for these `apos apostrophe-users:add admin admin`. These can all still be run more directly on the command line with `node app`, e.g., `node app apostrophe-users:add admin admin`.
 
 ## 2.3.7 - 2021-06-02
 
@@ -26,10 +29,11 @@ now means something (errors).
 * Removes `sync-request` as a dependency.
 * Adds `--dev` flag to `npm update` when running `create-project` with the `--setup` flag so that devDependencies are installed.
 
-## 2.3.4 - May 18, 2020
+## 2.3.4 - 2020-05-18
 
-### Break:
-* The Apostrophe CLI no longer supports running core and Apostrohe module tasks. The CLI tool was providing an alias for these `apos apostrophe-users:add admin admin`. These can all still be run more directly on the command line with `node app`, e.g., `node app apostrophe-users:add admin admin`.
+### Adds
+
+* Documents and prioritizes the existing `apos` command alias as the CLI command.
 
 ## 2.3.3 - 2020-05-06
 
