@@ -8,7 +8,9 @@ command.
 
 ### Breaks
 
-- The Apostrophe CLI no longer supports running core and Apostrophe module tasks. The CLI tool was providing an alias for these `apos apostrophe-users:add admin admin`. These can all still be run more directly on the command line with `node app`, e.g., `node app apostrophe-users:add admin admin`.
+- The Apostrophe CLI no longer supports running core and Apostrophe module tasks.
+  - The CLI tool was providing an alias for these `apos apostrophe-users:add admin admin`. These can all still be run more directly on the command line with `node app`, e.g., `node app apostrophe-users:add admin admin`.
+- Creating a piece type with `create-piece` no longer attempts to convert a singular piece type name to plural. The piece type name should be provided as plural for A2 or singular for A3, as per the custom.
 
 ## 2.3.7 - 2021-06-02
 
