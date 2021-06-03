@@ -16,6 +16,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^5.1.0",
+    "common-tags": "^1.8.0",
     "conf": "^6.2.4",
     "lodash": "^4.17.20",
     "package-json": "^6.5.0",
