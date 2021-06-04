@@ -51,6 +51,12 @@ module.exports = {
 }
 ```
 
+Add a `--player` option to the command to include the client-side Javascript "player" boilerplate to the new widget module as well.
+
+```bash
+apos create-widget tabs --player
+```
+
 ## Create a piece
 To bootstrap the necessary files and basic configuration for a new Apostrophe piece type, run the following command from within your Apostrophe project's root directory:
 

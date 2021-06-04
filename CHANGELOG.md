@@ -5,6 +5,7 @@
 - Documents and prioritizes the existing `apos` command alias as the CLI
 command.
 - More colors! Command logs are no longer all an ❗️alarming❗️ shade of red. Red now means errors.
+- Using the `--player` option for creating widgets now adds a "lean" player rather than the version depending on jQuery.
 
 ### Breaks
 
