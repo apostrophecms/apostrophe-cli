@@ -2,10 +2,10 @@
 
 require('shelljs/global');
 require('colors');
-var { program } = require('commander');
-var util = require('../lib/util');
+const { program } = require('commander');
+const util = require('../lib/util');
 const confUtils = require('../lib/conf-utils');
-var fs = require('fs');
+const fs = require('fs');
 
 async function execute () {
   program.version(getVersion());
@@ -13,27 +13,27 @@ async function execute () {
   // Get version of apostrophe-cli and apostrophe.
   function getVersion() {
     require('pkginfo')(module, 'version');
-    var cwd = process.cwd();
+    const cwd = process.cwd();
 
-    var output = 'apostrophe-cli: v' + module.exports.version + '\n';
-    var aposPath = cwd + '/node_modules/apostrophe/';
+    let output = 'apostrophe-cli: v' + module.exports.version + '\n';
+    const aposPath = cwd + '/node_modules/apostrophe/';
 
     // Append message for apostrophe.
     if (fs.existsSync(aposPath)) {
-      var aposPkg = require(aposPath + 'package.json');
+      const aposPkg = require(aposPath + 'package.json');
 
       output += 'apostrophe v' + aposPkg.version + ' is installed in this project.';
     } else {
-      var request = require('sync-request');
-      var response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
+      const request = require('sync-request');
+      const response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
 
       if (response.statusCode === 200) {
-        var packageJSON = JSON.parse(response.body);
+        const packageJSON = JSON.parse(response.body);
 
         output += 'apostrophe ' + packageJSON.dependencies.apostrophe + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
       } else {
-        var execSync = require('child_process').execSync;
-        var aposVersion = execSync('npm view apostrophe version').toString();
+        const execSync = require('child_process').execSync;
+        const aposVersion = execSync('npm view apostrophe version').toString();
 
         output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
       }
