@@ -30,6 +30,9 @@ function getVersion() {
   return output;
 }
 
+// Warn about deprecated version.
+util.deprecated();
+
 util.checkDependencies();
 
 require('../lib/commands/create')(program);

@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Adds
+
+- Adds a deprecation message, guiding people to use `@apostrophecms/cli` instead.
+
 ## 2.3.7 - 2021-06-02
 
 ### Fixes
